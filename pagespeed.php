@@ -1,11 +1,11 @@
 <?php
 // PageSpeed Insights API endpoint
 $apiEndpoint = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
-$apiKey = 'AIzaSyBW7DDyJ2eMZrhitv3wMhRl358kVLgUObI'; // Replace with your actual API key
+$apiKey = 'yourapikey'; // Replace with your actual API key
 
 // Parameters for the API request
 $params = [
-    'url' => 'https://hoolahoop.us/test/pdf_system/certificate2.php?id=3', // Assuming certificate1.php is on your local server
+    'url' => 'https://yoururl/pdf_system/certificate2.php?id=3', // Assuming certificate1.php is on your local server
     'screenshot' => true,
     'key' => $apiKey,
 ];

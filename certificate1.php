@@ -1,7 +1,7 @@
 <?php
 if (isset($_GET['id'])) {
     // Your endpoint URL to fetch user details
-    $endpoint = 'https://hoolahoop.us/test/pdf_system/cert1api.php?id=' . $_GET['id'];
+    $endpoint = 'https:yoururl/pdf_system/cert1api.php?id=' . $_GET['id'];
 
     // Fetch user details from the endpoint
     $userDetails = file_get_contents($endpoint);
@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
         $userDob = $userData['dob'];
         // $userControl = $userData['control_no'];
  // Fetch a control number that is not used
- $controlNumbersEndpoint = 'https://hoolahoop.us/test/pdf_system/control.php';
+ $controlNumbersEndpoint = 'https://yoururl/pdf_system/control.php';
  $controlNumbersJson = file_get_contents($controlNumbersEndpoint);
  $controlNumbersData = json_decode($controlNumbersJson, true);
 
@@ -30,7 +30,7 @@ if (isset($_GET['id'])) {
      if ($control['used'] == '0') {
          $userControl = $control['control_no'];
          // Update the control number as used
-         $updateControlEndpoint = 'https://hoolahoop.us/test/pdf_system/control.php?id=' . $control['id'];
+         $updateControlEndpoint = 'https://yoururl/pdf_system/control.php?id=' . $control['id'];
          $updateControlData = array('id' => $control['id'], 'used' => '1', 'control_no' => $userControl);
          $updateControlOptions = array(
              'http' => array(

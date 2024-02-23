@@ -1,9 +1,9 @@
 <?php 
     class Database {
         private $host = "localhost";
-        private $database_name = "u175492522_pdf_system";
-        private $username = "u175492522_pdf_system";
-        private $password = "Pdf_system123";
+        private $database_name = "your_database";
+        private $username = "root";
+        private $password = "";
         public $conn;
 
         public function getConnection(){
